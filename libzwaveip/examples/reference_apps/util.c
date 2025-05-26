@@ -27,7 +27,7 @@ const char* find_xml_file(char *argv0) {
   const char xml_filename[] = "/ZWave_custom_cmd_classes.xml";
   strncpy(xmlpath, dirname(argv0), PATH_MAX);
   xmlpath[PATH_MAX - 1] = 0;
-  strncat(xmlpath, xml_filename, PATH_MAX - strlen(xmlpath));
+  strncat(xmlpath, xml_filename, PATH_MAX - strlen(xmlpath) - 1);
   xmlpath[PATH_MAX - 1] = 0;
   return xmlpath;
 }
